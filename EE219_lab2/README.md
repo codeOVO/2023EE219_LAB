@@ -43,7 +43,7 @@ QAT's backward process:
 
 The black line is our approximate value, the red line is real value. We can approximate that the gradient is 1 in the backward process if the quantized value is in the right range.
 
-$$\frac{\partial \hat X}{\partial x} = \begin{cases} 1, if \ 0 \leq x_{int} \leq 2^{BW}-1 \\
+$$\frac{\partial \hat X}{\partial x} = \begin{cases} 1, if \ -2^{BW-1} \leq x_{int} \leq 2^{BW-1}-1 \\
 0,otherwise\end{cases} $$
 
 
